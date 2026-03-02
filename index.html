@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BDS GYM</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at center, #8b0000, #3b0000);
+    color: black;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-family: 'Gravitas One', cursive;
+    font-size: 28px;
+    color: white;
+}
+
+.join-btn {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    background: gold;
+}
+
+/* Card Layout */
+.card {
+    background: white;
+    margin: 30px auto;
+    width: 85%;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Equipment Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.equipment {
+    text-align: center;
+    cursor: pointer;
+}
+
+.equipment img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.equipment:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Plans */
+.plans {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Location */
+.location {
+    text-align: center;
+    font-size: 18px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">BDS GYM</div>
+    <div class="join-btn" onclick="payNow()">JOIN</div>
+</header>
+
+<!-- Hero -->
+<div class="card hero">
+    <img src="gym-couple.jpg" alt="Gym Couple">
+    <div class="hero-text">AVAILABLE IN YOUR LOCALITY</div>
+</div>
+
+<!-- Equipment Section -->
+<div class="card">
+    <div class="grid">
+
+        <div class="equipment" onclick="showExercises('Stationary Bike')">
+            <img src="bike.jpg">
+            <p>Stationary Bike</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Kettlebell')">
+            <img src="kettlebell.jpg">
+            <p>Kettlebell</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Barbell')">
+            <img src="barbell.jpg">
+            <p>Barbell</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Lat Pulldown')">
+            <img src="latpulldown.jpg">
+            <p>Lat Pulldown</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Bench Press')">
+            <img src="bench.jpg">
+            <p>Bench Press</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Squat Rack')">
+            <img src="squat.jpg">
+            <p>Squat Rack</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Dumbbells')">
+            <img src="dumbbell.jpg">
+            <p>Dumbbells</p>
+        </div>
+
+        <div class="equipment" onclick="showExercises('Treadmill')">
+            <img src="treadmill.jpg">
+            <p>Treadmill</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Plans -->
+<div class="card plans">
+    About Plans<br><br>
+    Joining<br>
+    1500/-<br><br>
+    Monthly<br>
+    500/-
+</div>
+
+<!-- Location -->
+<div class="card location">
+    📍 Location: BDS Gym Centre, Your Local Area, Guwahati
+</div>
+
+<script>
+
+function payNow() {
+    window.location.href = "upi://pay?pa=8638136604@ibl&pn=BDSGYM&cu=INR";
+}
+
+function showExercises(equipment) {
+    alert("Exercises available with " + equipment + ":\n\n• Exercise 1\n• Exercise 2\n• Exercise 3");
+}
+
+</script>
+
+</body>
+</html>
